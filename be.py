@@ -80,9 +80,9 @@ for url in urls:
             fixture = 'https://www.betexplorer.com' + match.get('href')
             #use playwright to render javascript of each fixture page
             with sync_playwright() as p:
-                browser = p.chromium.launch(headless=False)
+                browser = p.chromium.launch()
                 page = browser.new_page()
-                page.set_default_timeout(timeout=120000)
+                # page.set_default_timeout(timeout=120000)
                 page.goto(fixture)
                 try:
                     page.locator('div#match-results-home li.wrap-header__list__item.semilong').click()
