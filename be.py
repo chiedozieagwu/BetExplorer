@@ -224,7 +224,7 @@ for url in urls:
                     if home_odds:
                         #criteria5
                         if home_position:
-                            if home_position > away_position and home_odds <= 2.75:
+                            if home_position > away_position and home_odds >= 2.75:
                                 criteria.append(criteria5)
 
                     #criteria 6
